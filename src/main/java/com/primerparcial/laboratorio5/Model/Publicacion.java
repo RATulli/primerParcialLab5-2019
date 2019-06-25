@@ -36,4 +36,10 @@ public class Publicacion
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "publicacion")
     private List<Comentario> listaComentarios;
 
+    @PrePersist
+    public void setFechaPublicacion()
+    {
+        if (this.getFechaPublicacion()!=null)
+            this.fechaPublicacion = new Date();
+    }
 }

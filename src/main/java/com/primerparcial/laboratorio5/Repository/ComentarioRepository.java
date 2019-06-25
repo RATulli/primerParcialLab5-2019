@@ -1,9 +1,11 @@
 package com.primerparcial.laboratorio5.Repository;
 
-import com.primerparcial.laboratorio5.Model.Usuario;
+import com.primerparcial.laboratorio5.Model.Comentario;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ComentarioRepository extends JpaRepository<Usuario, Integer>
+@Repository
+public interface ComentarioRepository extends JpaRepository<Comentario, Integer>
 {
 
 }
